@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="klW-CR-SEm">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="jLq-pK-jcv">
+            <objects>
+                <viewController id="klW-CR-SEm" customClass="ViewController" customModule="MultipeerConnectivity" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YJy-We-83V"/>
+                        <viewControllerLayoutGuide type="bottom" id="uhk-uh-zL5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iqy-rl-He7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="BH1-wr-zeS">
+                                <rect key="frame" x="57.5" y="319.5" width="260" height="29"/>
+                                <segments>
+                                    <segment title="BLACK"/>
+                                    <segment title="GRAY"/>
+                                    <segment title="LIGHTGRAY"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="colorChange:" destination="klW-CR-SEm" eventType="valueChanged" id="bj9-RS-qUj"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHl-GD-hfC">
+                                <rect key="frame" x="166.5" y="249" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BH1-wr-zeS" firstAttribute="centerY" secondItem="iqy-rl-He7" secondAttribute="centerY" id="26J-5P-EIY"/>
+                            <constraint firstItem="BH1-wr-zeS" firstAttribute="centerX" secondItem="iqy-rl-He7" secondAttribute="centerX" id="81c-M7-4BH"/>
+                            <constraint firstItem="BH1-wr-zeS" firstAttribute="top" secondItem="aHl-GD-hfC" secondAttribute="bottom" constant="50" id="Gx0-DM-oB5"/>
+                            <constraint firstItem="aHl-GD-hfC" firstAttribute="centerX" secondItem="BH1-wr-zeS" secondAttribute="centerX" id="muC-BX-rqD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="connectionsLabel" destination="aHl-GD-hfC" id="Cuy-EA-00W"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iBh-x8-cFQ" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
